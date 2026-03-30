@@ -1,0 +1,545 @@
+/* Base Styles & Netflix Typography */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #141414;
+    color: #fff;
+    /* Using Inter as the closest clean sans-serif to Netflix Sans */
+    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Splash Screen Video */
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s ease-out;
+}
+
+#splash-screen video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+/* Navbar */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: background-color 0.4s ease;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* Netflix style logo font */
+.nav-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #E50914;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 85vh;
+    /* ADD YOUR MAIN BACKGROUND IMAGE HERE */
+    background-image: url('Nihar.jpeg');
+    background-size: cover;
+    background-position: top center;
+}
+
+.hero-content {
+    position: absolute;
+    top: 30%;
+    left: 4%;
+    max-width: 650px;
+    z-index: 2;
+}
+
+/* Cinematic Title Font */
+.hero-main-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5rem;
+    margin: 0 0 10px 0;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero-description {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: #d2d2d2;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.hero-fade-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(180deg, transparent, rgba(20, 20, 20, 0.9), #141414);
+}
+
+/* Cinematic Quotes */
+.movie-quote {
+    font-style: italic;
+    color: #e5e5e5;
+    font-size: 0.9rem;
+    border-left: 3px solid #E50914;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.hero-quote {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 15px;
+    display: inline-flex;
+    align-items: center;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.play-btn {
+    background-color: white;
+    color: black;
+}
+
+.play-btn:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.info-btn {
+    background-color: rgba(109, 109, 110, 0.7);
+    color: white;
+}
+
+.info-btn:hover {
+    background-color: rgba(109, 109, 110, 0.9);
+}
+
+/* Rows and Horizontal Scrolling */
+.sliders-container {
+    padding: 0 0 50px 0;
+    margin-top: -60px;
+    position: relative;
+    z-index: 3;
+}
+
+.row {
+    margin-bottom: 3vw;
+}
+
+.row-title {
+    margin: 0 4% 10px;
+    font-size: 1.4vw;
+    font-weight: 600;
+    color: #e5e5e5;
+}
+
+.row-posters {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px 4%;
+    scrollbar-width: none;
+}
+
+.row-posters::-webkit-scrollbar {
+    display: none;
+}
+
+/* Netflix Card Hover Animations */
+.poster {
+    flex: 0 0 auto;
+    width: 280px;
+    /* Standardized card width */
+    background-color: #181818;
+    margin-right: 10px;
+    padding: 15px;
+    border-radius: 4px;
+    transition: transform 450ms;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.card-img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    /* Ensures your images don't stretch weirdly */
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.poster h4 {
+    margin: 0 0 8px 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.poster p {
+    font-size: 0.85rem;
+    color: #a3a3a3;
+    line-height: 1.4;
+    margin: 0;
+    font-weight: 300;
+}
+
+.poster .badge {
+    background: #E50914;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+/* The Netflix Scale Effect */
+.row-posters:hover .poster {
+    transform: translateX(-25%);
+}
+
+.poster:hover~.poster {
+    transform: translateX(25%);
+}
+
+.poster:hover {
+    transform: scale(1.2) !important;
+    z-index: 10;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+    background-color: #222;
+}
+
+/* =========================================
+   Episodes / Work Experience List
+   ========================================= */
+.episodes-container {
+    padding: 0 4%;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 3;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.season-dropdown {
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #444;
+    padding: 5px 15px;
+    font-family: 'Inter', sans-serif;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.episode-row {
+    display: flex;
+    align-items: center;
+    padding: 20px 10px;
+    border-bottom: 1px solid #333;
+    transition: background-color 0.3s;
+    border-radius: 4px;
+}
+
+.episode-row:hover {
+    background-color: #222;
+    /* Slight highlight when hovered */
+}
+
+.ep-number {
+    font-size: 1.8rem;
+    color: #d2d2d2;
+    width: 50px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.ep-thumbnail {
+    width: 160px;
+    flex-shrink: 0;
+    margin-right: 25px;
+}
+
+.ep-img {
+    width: 100%;
+    height: 90px;
+    border-radius: 4px;
+    object-fit: cover;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.ep-details {
+    flex-grow: 1;
+}
+
+.ep-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 8px;
+}
+
+.ep-title-row h4 {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.role {
+    font-weight: 300;
+    color: #a3a3a3;
+}
+
+.date {
+    color: #a3a3a3;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.ep-details p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #b3b3b3;
+    line-height: 1.5;
+}
+
+/* =========================================
+   Responsive Adjustments
+   ========================================= */
+@media (max-width: 768px) {
+
+    /* Navbar */
+    #navbar {
+        padding: 15px 4%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .nav-logo {
+        font-size: 2rem;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    /* Hero */
+    .hero {
+        height: 75vh;
+    }
+
+    .hero-content {
+        top: 25%;
+        max-width: 90%;
+    }
+
+    .hero-main-title {
+        font-size: 3rem;
+    }
+
+    .hero-quote {
+        font-size: 1.05rem;
+        margin-bottom: 15px;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        margin-right: 0;
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    /* Sliders */
+    .sliders-container {
+        margin-top: -30px;
+    }
+
+    .row-title {
+        font-size: 1.2rem;
+    }
+
+    .poster {
+        width: 220px;
+        padding: 12px;
+    }
+
+    .card-img {
+        height: 120px;
+    }
+
+    .poster h4 {
+        font-size: 0.95rem;
+    }
+
+    .poster p {
+        font-size: 0.85rem;
+    }
+
+    /* Disable aggressive hover scaling on mobile/touch screens */
+    .row-posters:hover .poster {
+        transform: none;
+    }
+
+    .poster:hover~.poster {
+        transform: none;
+    }
+
+    .poster:hover {
+        transform: scale(1.02) !important;
+        background-color: #1a1a1a;
+    }
+
+    /* Episodes / Works */
+    .episode-row {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 5px;
+    }
+
+    .ep-number {
+        display: none;
+    }
+
+    /* Hide the number on mobile */
+    .ep-thumbnail {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .ep-img {
+        height: 180px;
+    }
+
+    /* Improved image height on mobile */
+    .ep-title-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .date {
+        margin-top: 5px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Smaller mobile screens */
+    .nav-logo {
+        font-size: 1.7rem;
+    }
+
+    .hero {
+        height: 65vh;
+    }
+
+    .hero-content {
+        top: 22%;
+    }
+
+    .poster {
+        width: 200px;
+    }
+
+    .card-img {
+        height: 110px;
+    }
+
+    .ep-img {
+        height: 150px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

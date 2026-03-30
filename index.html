@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nihar Thapliyal | Interactive Résumé</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="splash-screen">
+        <video id="intro-video" muted autoplay playsinline>
+            <source src="YOUR_INTRO_VIDEO.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div id="main-content" class="hidden">
+        
+        <nav id="navbar">
+            <h1 class="nav-logo">nihar thapliyal</h1>
+            <div class="nav-links">
+                <a href="mailto:niharthapliyal@gmail.com">Contact: +91 96241 20773</a>
+            </div>
+        </nav>
+
+        <header class="hero">
+            <div class="hero-content">
+                <!-- <h1 class="hero-main-title">NIHAR THAPLIYAL</h1> -->
+                <div class="movie-quote hero-quote">"I am the one who builds."</div>
+                <p class="hero-description">
+                    I build cool things, fix what breaks, and keep it simple, sharp, and a little bit fun.
+                </p>
+                <div class="buttons">
+                    <button class="btn play-btn">▶ Résumé</button>
+                    <a href="https://drive.google.com/file/d/1xW6ZgJdgAgu-qYYASK-ZM3SabtiVMILq/view?usp=drivesdk" target="_blank">
+                        <button class="btn info-btn">ⓘ More Info</button>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-fade-bottom"></div>
+        </header>
+
+        <main class="sliders-container">
+            <section class="episodes-container">
+                <div class="section-header">
+                    <h2 class="row-title" style="margin-left: 0;">Work Experience</h2>
+                    <select class="season-dropdown">
+                        <option>Latest Season</option>
+                    </select>
+                </div>
+
+                <div class="episode-row">
+                    <div class="ep-number">1</div>
+                    <div class="ep-thumbnail">
+                        <img src="tatvasoft-placeholder.jpg" alt="TatvaSoft" class="ep-img">
+                    </div>
+                    <div class="ep-details">
+                        <div class="ep-title-row">
+                            <h4>TatvaSoft | <span class="role">Web Development Intern</span></h4>
+                            <span class="date">May 2025 - June 2025</span>
+                        </div>
+                        <p>Worked on a full-stack web application using .NET Core, React, SQL Server, and Entity Framework. Developed RESTful APIs, integrated frontend-backend components, and gained hands-on experience in scalable application development.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="row">
+                <h2 class="row-title">The Origin Story (EDUCATION)</h2>
+                <div class="row-posters">
+                    <div class="poster">
+                        <img src="sgvp-placeholder.jpg" alt="SGVP" class="card-img">
+                        <div class="movie-quote">"It’s not about what it is. It’s about what it can become."</div>
+                        <h4>10th (SSC) | THE SOURCE CODE (2020)</h4>
+                        <p>SGVP International School, Ahmedabad<br>Score: 94%</p>
+                    </div>
+                    <div class="poster">
+                        <img src="modi-school-placeholder.jpg" alt="Modi School" class="card-img">
+                        <div class="movie-quote">"A million variables. Only one optimal path."</div>
+                        <h4>12th (HSC) | THE ALGORITHM (2022)</h4>
+                        <p>Modi CBSE School, Rajkot<br>Score: 88.8% </p>
+                    </div>
+                    <div class="poster">
+                        <img src="vit-placeholder.jpg" alt="VIT Vellore" class="card-img">
+                        <div class="movie-quote">"We’re not just building a product. We’re building a legacy."</div>
+                        <h4>B.Tech | THE GLOBAL DEPLOYMENT (2022-2026)</h4>
+                        <p>VIT Vellore<br>CGPA: 8.57</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="row">
+                <h2 class="row-title">Blockbuster Projects</h2>
+                <div class="row-posters">
+                    <div class="poster">
+                        <img src="demeter-placeholder.jpg" alt="demeterTECH" class="card-img">
+                        <div class="movie-quote">"I'm going to make him an offer he can't refuse... on clean code."</div>
+                        <h4>demeterTECH (Feb 2025)</h4>
+                        <span class="badge">Ideathon Winner</span>
+                        <p>AI-powered agritech platform. ML models for crop advisory & price forecasting.</p>
+                    </div>
+                    <div class="poster">
+                        <img src="car-placeholder.jpg" alt="Car Rental" class="card-img">
+                        <h4>Car Rental System (Mar 2025)</h4>
+                        <p>Web app automating registration, booking, payments & fleet management.</p>
+                    </div>
+                    <div class="poster">
+                        <img src="course-placeholder.jpg" alt="Course Registration" class="card-img">
+                        <h4>Course Registration (Nov 2024)</h4>
+                        <p>PHP/MySQL app supporting dynamic enrollment. Integrated PHP, Perl & Python modules.</p>
+                    </div>
+                    <div class="poster">
+                        <img src="chat-placeholder.jpg" alt="Chat App" class="card-img">
+                        <h4>Group Chat App (Jun 2024)</h4>
+                        <p>Real-time multicast chat app in Java enabling local network messaging.</p>
+                    </div>
+                    <div class="poster">
+                        <img src="restaurant-placeholder.jpg" alt="Restaurant Site" class="card-img">
+                        <h4>Restaurant Website (Apr 2024)</h4>
+                        <p>Designed responsive website showcasing menu & services for a local restaurant.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="row">
+                <h2 class="row-title">Arsenal & Languages</h2>
+                <div class="row-posters">
+                    <div class="poster">
+                        <img src="code-placeholder.jpg" alt="Coding Skills" class="card-img">
+                        <div class="movie-quote">"I know Kung Fu... and React."</div>
+                        <h4>Digital Skills</h4>
+                        <p>HTML, JavaScript, CSS, Java, Python, MatLab, .NET, React, Node.js</p>
+                    </div>
+                    <div class="poster">
+                        <img src="azure-placeholder.jpg" alt="Azure" class="card-img">
+                        <h4>Certifications</h4>
+                        <p>Microsoft Azure Data Fundamentals</p>
+                    </div>
+                    <div class="poster">
+                        <img src="softskills-placeholder.jpg" alt="Soft Skills" class="card-img">
+                        <h4>Soft Skills</h4>
+                        <p>Leadership, Problem Solving, Attention to Detail, Adaptability, Networking, Conflict Resolution</p>
+                    </div>
+                    <div class="poster">
+                        <img src="languages-placeholder.jpg" alt="Languages" class="card-img">
+                        <h4>Languages</h4>
+                        <p>English, Hindi, Spanish, Gujarati</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="row">
+                <h2 class="row-title">Action & Sports</h2>
+                <div class="row-posters">
+                    <div class="poster">
+                        <img src="kabaddi-placeholder.jpg" alt="Kabaddi" class="card-img">
+                        <div class="movie-quote">"There is no spoon... only the gold medal."</div>
+                        <h4>Kabaddi & Football</h4>
+                        <p>National-level Kabaddi player (Captain of Team Gujarat/North West), state-level football player.</p>
+                    </div>
+                    <div class="poster">
+                        <img src="olympiad-placeholder.jpg" alt="Olympiads" class="card-img">
+                        <h4>Academics</h4>
+                        <p>Winner of multiple Olympiads and competitions.</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
